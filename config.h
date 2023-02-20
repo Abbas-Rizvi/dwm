@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Liberation Mono Regular:size=11:antialias=true:autohint=true", "JoyPixels-11"};
-static const char dmenufont[]       = "SF Mono-11";
+static const char *fonts[]          = { "Liberation Mono Regular:size=12:antialias=true:autohint=true", "JoyPixels-11"};
+static const char dmenufont[]       = "Liberation Mono Regular:size=12:antialias=true:autohint=true";
 
 // static const char col_gray1[]       = "#222222";
 // static const char col_gray2[]       = "#444444";
@@ -18,7 +18,8 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_purp[]        = "#75538C";
+//static const char col_purp[]        = "#75538C";
+static const char col_purp[]        = "#463154";
 static const char col_red[]         = "#C20F0F";
 
 static const char *colors[][3]      = {
