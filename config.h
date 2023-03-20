@@ -20,12 +20,13 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 //static const char col_purp[]        = "#75538C";
 static const char col_purp[]        = "#463154";
+static const char col_lpurp[]        = "#660000";
 static const char col_red[]         = "#C20F0F";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_purp,  col_purp  },
+	[SchemeSel]  = { col_gray4, col_purp,  col_lpurp  },
 };
 
 /* tagging */
