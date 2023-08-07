@@ -1,33 +1,60 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Liberation Mono Regular:size=12:antialias=true:autohint=true", "JoyPixels-11"};
-static const char dmenufont[]       = "Liberation Mono Regular:size=12:antialias=true:autohint=true";
+//static const char fonts[]          = "Liberation Mono:size=10:antialias=true:autohint=true";
+static const char *fonts[]          = { "Liberation Mono:size=10:antialias=true:autohint=true", "JoyPixels-10"};
+static const char dmenufont[]       = "Liberation Mono:size=10:antialias=true:autohint=true";
 
-// static const char col_gray1[]       = "#222222";
-// static const char col_gray2[]       = "#444444";
-// static const char col_gray3[]       = "#bbbbbb";
-// static const char col_gray4[]       = "#eeeeee";
-// static const char col_cyan[]        = "#005577";
 
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-//static const char col_purp[]        = "#75538C";
-static const char col_purp[]        = "#463154";
-static const char col_lpurp[]        = "#660000";
-static const char col_red[]         = "#C20F0F";
+// ------------------------------------------------------------
+//          NORMAL COLOR SCHEME
+// ------------------------------------------------------------
+
+/*
+
+ 
+    static const char col_gray1[]       = "#222222";
+    static const char col_gray2[]       = "#444444";
+    static const char col_gray3[]       = "#bbbbbb";
+    static const char col_gray4[]       = "#eeeeee";
+    //static const char col_purp[]        = "#75538C";
+    // static const char col_purp[]        = "#bd00ff";
+    static const char col_purp[]        = "#463154";
+    static const char col_lpurp[]        = "#660000";
+    static const char col_red[]         = "#C20F0F";
+    
+    static const char *colors[][3]      = {
+    	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+    	[SchemeSel]  = { col_gray4, col_purp,  col_lpurp  },
+    };
+    
+    
+*/
+
+// ------------------------------------------------------------
+//          DRACULA COLOR SCHEME
+// ------------------------------------------------------------
+
+
+static const char col_Background[] = "#282a36";
+static const char col_Cur_Line[] = "#44475a";
+static const char col_Fg[] = "#bd93f9";
+static const char col_White[] = "#f8f8f2";
+static const char col_Comment[] = "#6272a4";
+
+
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_purp,  col_lpurp  },
+	[SchemeNorm] = { col_Fg, col_Background, col_Cur_Line },
+	[SchemeSel]  = { col_White, col_Background,  col_Comment  },
 };
+
+
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6" , "7", "8", "9" };
@@ -43,7 +70,7 @@ static const Rule rules[] = {
 	{ "qBittorrent",    NULL,       NULL,       1 << 5,       0,           -1 },
 	{ "Hexchat",        NULL,       NULL,       1 << 6,       0,           -1 },
 	{ "Steam",          NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "discord",        NULL,       NULL,       1 << 8,       0,           -1 }
+	{ "webcord",        NULL,       NULL,       1 << 8,       0,           -1 }
 };
 
 /* window swallowing */
@@ -77,7 +104,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_purp, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_Background, "-nf", col_White, "-sb", col_Cur_Line, "-sf", col_White, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[] = { "librewolf", NULL };
 static const char *lockcmd[]  = { "xlock", "-mode", "rain", NULL };
