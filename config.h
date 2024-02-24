@@ -66,11 +66,12 @@ static const Rule rules[] = {
 	 */
 	/* class            instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",           NULL,       NULL,       0,            1,           -1 },
-//	{ "strawberry",     NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "qBittorrent",    NULL,       NULL,       1 << 5,       0,           -1 },
-	{ "Hexchat",        NULL,       NULL,       1 << 6,       0,           -1 },
-	{ "Steam",          NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "webcord",        NULL,       NULL,       1 << 8,       0,           -1 }
+	{ "qBittorrent",    NULL,       NULL,       1 << 5,       0,           1 },
+	{ "Hexchat",        NULL,       NULL,       1 << 7,       0,           1 },
+	{ "thunderbird",    NULL,       NULL,       1 << 6,       0,           1 },
+	{ "steam",          NULL,       NULL,       1 << 2,       0,           0 },
+	{ "cmus",          NULL,       NULL,       1 << 2,       0,           0 },
+	{ "WebCord",        NULL,       NULL,       1 << 8,       0,           1 }
 };
 
 /* window swallowing */
